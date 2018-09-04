@@ -1,4 +1,3 @@
-import javax.print.DocFlavor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -110,6 +109,7 @@ public class Controller
                     System.out.println("IO Exception could not print file");
                 }
 
+                view.finishOrder.setEnabled(false);
 
            }
        });

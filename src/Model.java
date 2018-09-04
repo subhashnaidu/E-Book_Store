@@ -1,11 +1,10 @@
 import java.io.*;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Model
 {
-    ArrayList<Book> inventoryList;
-    ArrayList<Book> shoppingCart;
+    private ArrayList<Book> inventoryList;
+    private ArrayList<Book> shoppingCart;
     int numItems;
     int iteration = 1;
     int quantity = 0;
@@ -38,7 +37,7 @@ public class Model
         this.shoppingCart.clear();
     }
 
-    public static ArrayList<Book> parseInventory(FileReader file) throws IOException
+    private static ArrayList<Book> parseInventory(FileReader file) throws IOException
     {
         BufferedReader bufRead = new BufferedReader(file);
         String line;
@@ -124,7 +123,7 @@ public class Model
 
     public void createTransactionsFile(String transID , String date) throws IOException
     {
-        FileWriter fileWriter = new FileWriter("transactions.txt");
+        FileWriter fileWriter = new FileWriter("transactions.txt",true);
         PrintWriter printWriter = new PrintWriter(fileWriter);
 
         for (int i = 0; i < shoppingCart.size(); i++)
