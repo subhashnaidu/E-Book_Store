@@ -9,3 +9,6 @@
 030920180917, 11234,  "Tricky Twenty-Two - Janet Evanovich", 12.95, 32, 0.2, 331.52, 09/03/2018, 9:17:50 PM
 030920180918, 11111,  "Top Secret Twenty One - Janet Evanovich", 8.99, 2, 0.0, 17.98, 09/03/2018, 9:18:28 PM
 030920180918, 22222,  "W Is For Wasted - Sue Grafton", 9.95, 2, 0.0, 19.90, 09/03/2018, 9:18:28 PM
+040920180217, 22222,  "W Is For Wasted - Sue Grafton", 9.95, 1, 0.0, 9.95, 09/04/2018, 2:17:42 PM
+040920180217, 99999,  "Rogue Lawyer - John Grisham", 15.95, 2, 0.0, 31.90, 09/04/2018, 2:17:42 PM
+040920180217, 11234,  "Tricky Twenty-Two - Janet Evanovich", 12.95, 1, 0.0, 12.95, 09/04/2018, 2:17:42 PM

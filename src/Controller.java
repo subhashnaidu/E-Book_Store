@@ -78,8 +78,11 @@ public class Controller
                view.process.setEnabled(true);
                view.confirm.setEnabled(false);
 
+
                if(model.getIteration()-1 == model.numItems)
                {
+                   view.bookIDLabel.setText(null);
+                   view.quantityLabel.setText(null);
                    view.finishOrder.setEnabled(true);
                    view.process.setEnabled(false);
                    view.confirm.setEnabled(false);

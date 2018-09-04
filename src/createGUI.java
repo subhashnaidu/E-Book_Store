@@ -13,7 +13,7 @@ public class createGUI
     JLabel bookIDLabel = new JLabel("Enter Book ID for item #1 :");
     JLabel quantityLabel = new JLabel("Enter quantity for Item #1 :");
     JLabel infoLable = new JLabel("Item #1 info :");
-    JLabel subtotalLable = new JLabel("Order Subtotal :");
+    JLabel subtotalLable = new JLabel("Order Subtotal for 1 item(s):");
 
     JTextField numItems = new JTextField("");
     JTextField bookId = new JTextField("");
@@ -110,6 +110,7 @@ public class createGUI
         bookIDLabel.setText("Enter Book ID for item #"+iteration +":");
         quantityLabel.setText("Enter quantity for Item#" + iteration + ":");
         infoLable.setText("Item #" + iteration + ":");
+        subtotalLable.setText("Order Subtotal for " + (iteration-1) + " item(s):");
     }
 
     public void clearTextFields()
