@@ -1,6 +1,12 @@
 
 public class Book
 {
+/*
+    This is the book class that holds all the information about a particular book.
+    It is used for the Inventory ArrayList and the Shopping cart ArrayList
+*/
+
+
     int bookId;
     String bookTitle;
     float price;
@@ -15,6 +21,8 @@ public class Book
         this.price = price;
         this.quantity = quant;
     }
+
+    // Getters and Setters for class Book.
 
     public int getBookId()
     {

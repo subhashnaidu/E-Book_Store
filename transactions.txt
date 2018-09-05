@@ -12,3 +12,8 @@
 040920180217, 22222,  "W Is For Wasted - Sue Grafton", 9.95, 1, 0.0, 9.95, 09/04/2018, 2:17:42 PM
 040920180217, 99999,  "Rogue Lawyer - John Grisham", 15.95, 2, 0.0, 31.90, 09/04/2018, 2:17:42 PM
 040920180217, 11234,  "Tricky Twenty-Two - Janet Evanovich", 12.95, 1, 0.0, 12.95, 09/04/2018, 2:17:42 PM
+050920180104, 11111,  "Top Secret Twenty One - Janet Evanovich", 8.99, 2, 0.0, 17.98, 09/05/2018, 1:04:08 PM
+050920180104, 22222,  "W Is For Wasted - Sue Grafton", 9.95, 1, 0.0, 9.95, 09/05/2018, 1:04:08 PM
+050920180104, 33333,  "Gray Mountain - John Grisham", 14.95, 1, 0.0, 14.95, 09/05/2018, 1:04:08 PM
+050920180104, 11111,  "Top Secret Twenty One - Janet Evanovich", 8.99, 1, 0.0, 8.99, 09/05/2018, 1:04:53 PM
+050920180104, 22222,  "W Is For Wasted - Sue Grafton", 9.95, 2, 0.0, 19.90, 09/05/2018, 1:04:53 PM

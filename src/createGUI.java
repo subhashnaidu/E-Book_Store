@@ -3,8 +3,15 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/*
+The view portion of the MVC architecture creates and manages the gui of the program. It handles all of the
+various changes to the gui when ever a user interacts with the interface.
+*/
 public class createGUI
 {
+
+    // Interface components that make up the GUI
+
     JFrame frame;
     JPanel formPanel;
     JPanel buttonPanel;
@@ -28,7 +35,7 @@ public class createGUI
     JButton newOrder = new JButton("New Order");
     JButton exit = new JButton("Exit");
 
-
+    // Default constructor that sets the default values for all the GUI components
     createGUI()
     {
         formPanel = new JPanel();
@@ -73,37 +80,44 @@ public class createGUI
         subTotal.setEnabled(false);
     }
 
+    //Gets ActionListener from the Controller
     public void addExitListener(ActionListener listener)
     {
         exit.addActionListener(listener);
     }
 
+    //Gets ActionListener from the Controller
     public void addProcessListener(ActionListener listener)
     {
         process.addActionListener(listener);
     }
 
+    //Gets ActionListener from the Controller
     public void addConfirmListener(ActionListener listener)
     {
         confirm.addActionListener(listener);
     }
 
+    //Gets ActionListener from the Controller
     public void addViewOrderListener(ActionListener listener)
     {
         viewOrder.addActionListener(listener);
     }
 
+    //Gets ActionListener from the Controller
     public void addFinishOrderListener(ActionListener listener)
     {
         finishOrder.addActionListener(listener);
     }
 
+    //Gets ActionListener from the Controller
     public void addNewOrderListener(ActionListener listener)
     {
         newOrder.addActionListener(listener);
     }
 
-    public void updateLables(int iteration)
+    //Updates various labels of the Gui to be in sync with the internal iteration
+    public void updateLabels(int iteration)
     {
         process.setText("Process Item #"+iteration);
         confirm.setText("Confirm Item #"+iteration);
@@ -113,20 +127,16 @@ public class createGUI
         subtotalLable.setText("Order Subtotal for " + (iteration-1) + " item(s):");
     }
 
+    // Clears Text fields after adding an item to the cart.
     public void clearTextFields()
     {
-        //Clear Text fields after new order button is pressed.
-//        numItems.setText("");
         bookId.setText("");
         quantity.setText("");
-//        itemInfo.setText("");
-//        subTotal.setText("");
-
     }
 
+    // Clears all text fields for a new order.
     public void clearTextFieldsForNewOrder()
     {
-        //Clear Text fields after new order button is pressed.
         numItems.setText("");
         bookId.setText("");
         quantity.setText("");
@@ -180,6 +190,9 @@ public class createGUI
         return Double.parseDouble(this.subTotal.getText());
     }
 
+
+    // Shows the conformation dialog after adding a book to the cart.
+    // If the book is not found it shows another dialog with appropriate text
     public void showConfirmDialog(boolean confirm, int iteration, int bookId)
     {
         if (confirm == true)
@@ -192,6 +205,7 @@ public class createGUI
         }
     }
 
+    // Shows the dialog for ViewOrder with all the relevant information
     public void showViewOrderDialog(ArrayList<Book> orderList)
     {
         double subtotal = 0;
@@ -217,16 +231,12 @@ public class createGUI
 
     }
 
+    // Shows the finish order dialog with tax and other total information.
     public void showFinishDialog(int numItems, ArrayList<Book> orderList, double subTotal, String strDate)
     {
         double subtotal = 0;
         double discount = 0;
         double total = 0;
-
-//        SimpleDateFormat sdfDate = new SimpleDateFormat("MM/dd/yyyy, h:mm:ss a");//dd/MM/yyyy
-////        sdfDate.setTimeZone(TimeZone.getTimeZone("EDT"));
-//        Date now = new Date();
-//        String strDate = sdfDate.format(now);
 
         String msg = "";
 

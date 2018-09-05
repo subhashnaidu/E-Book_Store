@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.ArrayList;
 
+// Model of the MVC architecture.
+// Holds and process the Inventory and shopping cart
 public class Model
 {
     private ArrayList<Book> inventoryList;
@@ -11,6 +13,7 @@ public class Model
 
     Model() throws IOException
     {
+        // Opens inventory file and parses information.
         FileReader inventory = new FileReader("inventory.txt");
         this.inventoryList = parseInventory(inventory);
         shoppingCart = new ArrayList<>();
@@ -101,6 +104,7 @@ public class Model
         this.iteration = iter;
     }
 
+    // Returns the various discounts for buying different quantities.
     public double calculateDiscounts(int quantity)
     {
         double discount = 0;
@@ -121,6 +125,7 @@ public class Model
         return discount;
     }
 
+    // Creates the transactions file after clicking the finish order button.
     public void createTransactionsFile(String transID , String date) throws IOException
     {
         FileWriter fileWriter = new FileWriter("transactions.txt",true);

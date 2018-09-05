@@ -1,40 +1,34 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+
+// Subhash Naidu
+// Enterprise Computing
+// Project 1 - E-book Store
+
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) throws IOException
     {
+
+/*
+
+      This program utilizes a MVC (Model View Controller) Architecture.
+      The model class holds and process all the information associated with the store. Such as parsing
+      inventory and storing the shopping cart for the user.
+
+      The createGUI class is the view part of MVC it creates and manages the view of the program.
+
+      The Controller class is what manages interaction between the model and the view. The view and model
+      don't know about the existence of the other. The controller is the middle man that manages both model and view.
+
+*/
+
+
+
         Model model = new Model();
         createGUI gui = new createGUI();
 
-//        ArrayList<Book> books = model.getInventory();
-//
-//        for (int i = 0; i < books.size(); i++)
-//        {
-//            System.out.println(books.get(i).getPrice());
-//        }
-
-//        LocalDate local = LocalDate.now();
-//        System.out.println(local);
-//
-//        LocalDateTime datetime = LocalDateTime.now();
-//        System.out.println(datetime);
-//
-//        gui.showFinishDialog(4,new ArrayList<Book>(),52.45);
-
-
         Controller eStore = new Controller(model,gui);
-
-//        gui.showFinishDialog(3,model.getShoppingCart(),32.33);
-
-
-
-
     }
 
 
